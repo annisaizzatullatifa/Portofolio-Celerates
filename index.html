@@ -67,7 +67,7 @@
         <!-- CONTENT WRAPPER-->
         <div id="content-wrapper">
             <!--HOME-->
-            <section id="home" class="full-height bg-dark-custom">
+            <section id="HOME" class="full-height about-section bg-dark-custom">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8">
@@ -76,7 +76,7 @@
                                 <span class="text-brand">UI/UX DESIGNER</span>
                                 FROM INDONESIA
                             </h1>
-                            <p class="description-home">
+                            <p class="lead mt-2 mb-4 description-home">
                                 I am a UI/UX Designer with experience in
                                 designing user-friendly and aesthetic interfaces
                                 for various platforms, including web and mobile.
@@ -95,8 +95,106 @@
                     </div>
                 </div>
             </section>
-        </div>
 
+            <section
+                id="ABOUT ME"
+                class="full-height px-lg-5 about-section bg-dark-custom"
+            >
+                <div class="container d-flex flex-column align-items-center">
+                    <div class="row pb-4">
+                        <div class="col-lg-8"></div>
+                        <h6 class="text-brand about-me" width="200">
+                            Let's bridge the gap between tech and humans!
+                        </h6>
+                        <p class="lead mt-2 mb-4 description-aboutme">
+                            I'm a student at Telkom University Bandung as a
+                            UI?UX Designer. My background in Informatics
+                            Engineering allows me to understand the technical
+                            aspects that make great user experiences. I'm
+                            skilled in design tools like Figma and leverage them
+                            to craft intuitive and visually appealing
+                            interfaces. My problem-solving skills, honed through
+                            software development, ensure my designs are not just
+                            beautiful but also functional and user-friendly
+                        </p>
+                        <p class="lead mt-2 mb-4 description-aboutme">
+                            I'm constantly seeking ways to improve and stay
+                            updated with the latest design trends. Let's connect
+                            and discuss how I can help you create exceptional
+                            user experiences!
+                        </p>
+                        <div class="tab-titles">
+                            <p
+                                class="tab-links active-link"
+                                onclick="opentab('SKILLS')"
+                            >
+                                SKILLS
+                            </p>
+                            <p
+                                class="tab-links"
+                                onclick="opentab('EXPERIENCE')"
+                            >
+                                EXPERIENCE
+                            </p>
+                            <p class="tab-links" onclick="opentab('EDUCATION')">
+                                EDUCATION
+                            </p>
+                        </div>
+                        <div class="tab-contents active-tab" id="SKILLS">
+                            <ul>
+                                <li>
+                                    <span>UI/UX</span><br />
+                                    Desingning Web/App mobile interfaces
+                                </li>
+                                <li>
+                                    <span>Web Development</span><br />
+                                    Building website
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="EXPERIENCE">
+                            <ul>
+                                <li>
+                                    <span>UI/UX</span><br />
+                                    Desingning Web/App mobile interfaces
+                                </li>
+                                <li>
+                                    <span>Web Development</span><br />
+                                    Building website
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="EDUCATION">
+                            <ul>
+                                <li>
+                                    <span>UI/UX</span><br />
+                                    Desingning Web/App mobile interfaces
+                                </li>
+                                <li>
+                                    <span>Web Development</span><br />
+                                    Building website
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
         <script src="./asset/js/bootstrap.bundle.min.js"></script>
         <script src="./asset/js/aos.js"></script>
         <script src="./asset/js/main.js"></script>

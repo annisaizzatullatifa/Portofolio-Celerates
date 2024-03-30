@@ -25,6 +25,7 @@ h5,
 h6 {
     color: var(--color-heading);
     font-weight: 700;
+    font-size: 65px;
 }
 
 h1 {
@@ -48,6 +49,51 @@ img {
 .text-brand {
     color: var(--color-brand);
 }
+.about-me {
+    margin-top: 5px;
+    text-align: left;
+}
+.tab-titles {
+    display: flex;
+    margin: 20px 0 48px;
+}
+.tab-links {
+    margin-right: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--color-brand);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0, 4s;
+}
+.tab-links.active-link::after {
+    width: 50%;
+}
+.tab-contents ul li {
+    list-style: none;
+    margin: 0px 0;
+    position: relative;
+    top: 0;
+}
+
+.tab-contents ul li span {
+    color: var(--color-brand);
+    font-size: 14px;
+}
+.tab-contents {
+    display: none;
+}
+.tab-contents.active-tab {
+    display: block;
+}
 
 .bg-dark-custom {
     background-color: #090909;
@@ -59,6 +105,7 @@ img {
     display: flex;
     align-items: center;
 }
+
 /*NAVBAR*/
 .navbar {
     background-color: var(--color-base);
@@ -95,9 +142,7 @@ img {
 .itsme-size {
     font-size: 25px;
 }
-.link-custom {
-    font-size: 25px;
-}
+
 .btn {
     padding: 12px 28px;
     font-weight: 700;
@@ -105,8 +150,30 @@ img {
 .btn-brand {
     background-color: var(--color-brand);
     border-color: var(--color-brand);
+    color: var(--color-base);
 }
 .btn-brand:hover,
 .btn-brand:focus {
     background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.link-custom {
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+}
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2%;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+.link-custom:hover::after {
+    width: 100%;
 }
