@@ -226,9 +226,13 @@ img {
     border-color: #262626;
     color: #033f47;
 }
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
 
 #CONTACT .form-control::placeholder {
-    color: #262626;
+    color: #fff;
 }
 #contact input.form-control {
     height: 44px;
