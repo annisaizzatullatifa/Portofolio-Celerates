@@ -2,7 +2,7 @@
     --color-body: #b6cbce;
     --color-heading: #eef3db;
     --color-base: #033f47;
-    --color-base2: #022a30;
+    --color-base2: #090909;
     --color-brand: #e0f780;
     --color-brand2: #deff58;
     --sidbar-width: 240px;
@@ -25,11 +25,13 @@ h5,
 h6 {
     color: var(--color-heading);
     font-weight: 700;
-    font-size: 65px;
 }
 
 h1 {
     font-size: 65px;
+}
+.font_services {
+    font-size: 30px;
 }
 
 a {
@@ -49,6 +51,10 @@ img {
 .text-brand {
     color: var(--color-brand);
 }
+.bg-base {
+    background-color: var(--color-base);
+}
+
 .about-me {
     margin-top: 5px;
     text-align: left;
@@ -103,7 +109,27 @@ img {
     min-height: 100vh;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid;
+}
+.shadow-effect {
+    transition: all 0.5s;
+}
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
 }
 
 /*NAVBAR*/
@@ -118,7 +144,6 @@ img {
 .navbar .nav-link:hover {
     color: var(--color-brand);
 }
-
 @media (min-width: 992px) {
     .navbar {
         min-height: 100vh;
