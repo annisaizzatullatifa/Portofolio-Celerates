@@ -202,3 +202,21 @@ img {
 .link-custom:hover::after {
     width: 100%;
 }
+
+.p-static-card {
+    font-size: 18px;
+}
+
+.img-fluid-intern {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.img-fluid-project {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
